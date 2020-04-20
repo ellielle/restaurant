@@ -1,0 +1,9 @@
+#content, #content-header {
+  display: flex;
+  justify-content: center;
+}
+
+.header-image {
+  width: auto;
+  height: 300px;
+}
