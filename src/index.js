@@ -1,1 +1,2 @@
-console.log('it works')
+import { loadPage } from "./load-page";
+loadPage();
