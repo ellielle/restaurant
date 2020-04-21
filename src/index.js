@@ -1,5 +1,8 @@
 import { loadPage } from "./common";
-import { createTabs } from "./about";
+import { createAboutTab } from "./about";
+import { createContactTab } from "./contact";
+import { createMenuTab } from "./menu";
 
 loadPage();
-createTabs();
+createAboutTab();
+
