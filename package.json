@@ -1,12 +1,12 @@
 {
   "name": "restaurant",
   "version": "1.0.0",
-  "description": "",
+  "description": "space crabs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
   },
   "keywords": [],
   "author": "",
@@ -14,5 +14,6 @@
   "devDependencies": {
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
-  }
+  },
+  "dependencies": {}
 }

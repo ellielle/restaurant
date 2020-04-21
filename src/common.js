@@ -16,3 +16,21 @@ export function loadPage() {
   newDiv.append(head1, head4, para1);
   content.appendChild(newDiv);
 }
+
+export function buildElement(element, elementClass, elementID = '') {
+  let newElement = document.createElement(`${element}`);
+  if (elementClass !== '') {
+    newElement.classList.add(elementClass);
+  }
+  if (elementID !== '') {
+    newElement.id = elementID;
+  }
+  return newElement;
+}
+
+export function buildLabel(element, elementClass, elementFor) {
+  let newLabel = document.createElement(`${element}`);
+  newLabel.htmlFor = `${elementFor}`;
+  newLabel.classList.add(elementClass);
+  return newLabel;
+}

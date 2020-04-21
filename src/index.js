@@ -1,2 +1,5 @@
-import { loadPage } from "./load-page";
+import { loadPage } from "./common";
+import { createTabs } from "./about";
+
 loadPage();
+createTabs();
