@@ -1,14 +1,31 @@
+@import '_variables.scss';
+
+body {
+  background-color: $restaurant-background;
+}
+
 #content-container, #content-header {
   display: flex;
   justify-content: center;
+  color: $restaurant-font-color;
+  text-shadow: 2px 2px #2d0900;
 }
 
 .header-image {
   width: auto;
-  height: 300px;
+  height: auto;
 }
 
 .tab-list {
   min-width: 70%;
   text-align: center;
 }
+
+.quote {
+  font-weight: bold;
+  .quote-author {
+    font-weight: normal;
+    font-style: italic;
+  }
+}
+

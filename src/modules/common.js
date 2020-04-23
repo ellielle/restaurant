@@ -12,7 +12,7 @@ export function loadPage() {
   let labelContact = buildLabel('label', 'tab-btn', 'tab-contact');
   let contentDiv = buildElement('div', 'content');
   tabAbout.checked = true;
-  headerImage.src = "header.jpg";
+  headerImage.src = "images/header.png";
   headerImage.alt = "It's a crab.";
   headerImage.classList.add('header-image');
   tabList.append(tabAbout, labelAbout, tabMenu, labelMenu, tabContact, labelContact, contentDiv);
