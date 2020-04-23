@@ -21,7 +21,7 @@ export function loadPage() {
   body.append(headContent, containerContent);
 }
 
-export function buildElement(element, elementClass, elementID = '') {
+function buildElement(element, elementClass, elementID = '') {
   let newElement = document.createElement(`${element}`);
   if (elementClass !== '') {
     newElement.classList.add(elementClass);
