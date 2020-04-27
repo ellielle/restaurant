@@ -2,23 +2,53 @@
 
 body {
   background-color: $restaurant-background;
+  margin: 2rem;
 }
 
-#content-container, #content-header {
+.flex-container {
   display: flex;
-  justify-content: center;
-  color: $restaurant-font-color;
-  text-shadow: 2px 2px #2d0900;
+  flex-flow: column;
 }
 
-.header-image {
-  width: auto;
-  height: auto;
+#content-container, #header-container {
+  color: $restaurant-font-color;
+  text-shadow: 0.5px 0.5px #2d0900;
+}
+
+#header-container {
+  align-self: center;
+}
+
+#content-container > .content {
+  margin:0 15%;
+  text-align: center;
 }
 
 .tab-list {
-  min-width: 70%;
+  margin: 0 -2rem;
   text-align: center;
+  background-color: $restaurant-background-contrast;
+}
+
+.tab-btn {
+  padding: 3px 5px 0 5px;
+  margin: 0 -2.5px 0 -2.5px;
+}
+
+.content {
+  div > p {
+    margin: 0;
+  }
+}
+
+.menu-item {
+  display: grid;
+  grid-template-columns: [crab] 25% [price] 25%;
+  margin: 20px 0 0 25%;
+  > img {
+    height: auto;
+    width: 150px;
+  }
 }
 
 .quote {
@@ -29,3 +59,20 @@ body {
   }
 }
 
+input {
+  visibility: hidden;
+  &:checked + label {
+    color: $restaurant-background;
+    background-color: $restaurant-font-color;
+  }
+}
+
+label {
+  cursor: pointer;
+}
+
+footer {
+  margin: 40vh 0 0 -25%;
+  background-color: #2d0900;
+  width: 100vw;
+}

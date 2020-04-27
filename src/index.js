@@ -5,7 +5,7 @@ import { createMenuTab } from "./modules/menu";
 import './styles/style.scss';
 
 loadPage();
-createAboutTab(); // TODO remove, just for testing
+createAboutTab();
 
 (function createEventListeners() {
   let inputTabs = document.querySelectorAll('input');

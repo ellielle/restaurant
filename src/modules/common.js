@@ -1,7 +1,8 @@
 export function loadPage() {
   let body = document.querySelector('body');
+  let flexContainer = buildElement('div', 'flex-container');
   let containerContent = buildElement('div', '', 'content-container');
-  let headContent = buildElement('div', '', 'content-header');
+  let headContent = buildElement('div', '', 'header-container');
   let headerImage = document.createElement('img');
   let tabList = buildElement('div', 'tab-list');
   let tabAbout = buildTabMenu('tab-about');
@@ -15,10 +16,11 @@ export function loadPage() {
   headerImage.src = "images/header.png";
   headerImage.alt = "It's a crab.";
   headerImage.classList.add('header-image');
-  tabList.append(tabAbout, labelAbout, tabMenu, labelMenu, tabContact, labelContact, contentDiv);
+  tabList.append(tabAbout, labelAbout, tabMenu, labelMenu, tabContact, labelContact);
   headContent.appendChild(headerImage);
-  containerContent.appendChild(tabList);
-  body.append(headContent, containerContent);
+  containerContent.append(tabList, contentDiv);
+  flexContainer.append(headContent, containerContent);
+  body.appendChild(flexContainer);
 }
 
 function buildElement(element, elementClass, elementID = '') {
@@ -34,8 +36,11 @@ function buildElement(element, elementClass, elementID = '') {
 
 function buildLabel(element, elementClass, elementFor) {
   let newLabel = document.createElement(`${element}`);
+  let text = elementFor.split('-')[1];
+  text = text.charAt(0).toUpperCase() + text.slice(1);
   newLabel.htmlFor = `${elementFor}`;
   newLabel.classList.add(elementClass);
+  newLabel.textContent = text;
   return newLabel;
 }
 
