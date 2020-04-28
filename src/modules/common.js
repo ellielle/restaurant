@@ -21,6 +21,36 @@ export function loadPage() {
   containerContent.append(tabList, contentDiv);
   flexContainer.append(headContent, containerContent);
   body.appendChild(flexContainer);
+  buildQuoteSection();
+  buildFooter();
+}
+
+function buildFooter() {
+  let anchor = document.createElement('a');
+  let quote = document.querySelector('.quote');
+  let footer = document.createElement('footer');
+  let github = document.createElement('img');
+  anchor.href = "https://github.com/ellielle/restaurant";
+  github.src = "images/github.png";
+  github.alt = "Github link";
+  github.classList.add('github-logo');
+  anchor.appendChild(github);
+  footer.appendChild(anchor);
+  quote.appendChild(footer);
+}
+
+function buildQuoteSection() {
+  let body = document.querySelector('body');
+  let quoteDiv = document.createElement('div');
+  let quote = document.createElement('p');
+  let author = document.createElement('span');
+  quoteDiv.classList.add('quote');
+  quote.textContent = 'Their crabs are so good they gave my crabs crabs!';
+  author.textContent = ' - Johnathan "Johnny Johnson" Johnson';
+  author.classList.add('quote-author');
+  quote.appendChild(author);
+  quoteDiv.appendChild(quote);
+  body.appendChild(quoteDiv);
 }
 
 function buildElement(element, elementClass, elementID = '') {
